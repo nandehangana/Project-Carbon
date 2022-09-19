@@ -1,0 +1,25 @@
+{
+  "name": "project-carbon",
+  "version": "1.0.0",
+  "description": "Backend for Carbon credits market place",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Henri-99/Project-Carbon.git"
+  },
+  "author": "Tatenda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Henri-99/Project-Carbon/issues"
+  },
+  "homepage": "https://github.com/Henri-99/Project-Carbon#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.7.3"
+  }
+}
