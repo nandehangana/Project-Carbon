@@ -7,7 +7,12 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-app": "npm run build-client && npm start",
+    "build-client": "mkdir -p public && cd client && npm run build-app && cd ..",
+    "start": "node server.js",
+    "dev": "nodemon server.js --host 0.0.0.0",
+    "format": "prettier --write 'server.js' 'routes/*.js' 'models/*.js' 'config/*.js'"
   },
   "repository": {
     "type": "git",
@@ -20,6 +25,14 @@
   },
   "homepage": "https://github.com/Henri-99/Project-Carbon#readme",
   "dependencies": {
-    "@openzeppelin/contracts": "^4.7.3"
+    "@openzeppelin/contracts": "^4.7.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "sequelize": "^6.23.0",
+    "sqlite3": "^5.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1"
   }
 }

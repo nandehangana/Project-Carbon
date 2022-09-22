@@ -2,6 +2,8 @@
 
 A carbon-credit marketplace
 
+## Tech Stack 
+
 ## Installation
 
 Install Ganache for local blockchain
@@ -16,6 +18,43 @@ Visit https://www.trufflesuite.com/tutorial
 Install project dependencies
 ```
 npm install
+```
+
+
+## API
+
+Create a `dbconfig.json` file in the root folder and add the following 
+
+- Using SQLITE for the moment
+
+``` 
+
+{
+  "development": {
+    "username": "root",
+    "password": "password",
+    "database": "project",
+    "host": "database.db",
+    "dialect": "sqlite",
+    "logging": false
+  },
+  "test": {
+    "username": "root",
+    "password": "password",
+    "database": "project",
+    "host": "database.db",
+    "dialect": "sqlite",
+    "logging": false
+  },
+  "production": {
+    "username": "root",
+    "password": "password",
+    "database": "project",
+    "host": "database.db",
+    "dialect": "sqlite",
+    "logging": false
+  }
+}
 ```
 
 ## Compile contract

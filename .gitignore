@@ -135,4 +135,8 @@ apptest.db
 .idea/
 logs/
 
+dbconfig.json
+/public
+database.db
+
 # End of https://www.toptal.com/developers/gitignore/api/node
