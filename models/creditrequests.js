@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 module.exports = function (sequelize, DataTypes) {
   return sequelize.define(
-    "test",
+    "creditrequests",
     {
       pk: {
         autoIncrement: true,
@@ -9,22 +9,32 @@ module.exports = function (sequelize, DataTypes) {
         allowNull: false,
         primaryKey: true,
       },
-      name: {
-        type: DataTypes.STRING(50),
+      memberid: {
+        type: DataTypes.INTEGER,
+        foreignKey: true,
+        allowNull: false,
+      },
+      amount: {
+        type: DataTypes.INTEGER,
         allowNull: true,
       },
-      meta: {
-        type: DataTypes.STRING(50),
+      /*address: {
+                type: DataTypes.STRING(255),
+                allowNull: true,
+            },*/
+
+      status: {
+        type: DataTypes.STRING(255),
         allowNull: true,
       },
     },
     {
       sequelize,
-      tableName: "test",
+      tableName: "creditrequests",
       timestamps: false,
       indexes: [
         {
-          name: "PK_test",
+          name: "PK_creditrequests",
           unique: true,
           fields: [{ name: "PK" }],
         },

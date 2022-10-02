@@ -1,14 +1,19 @@
 var DataTypes = require("sequelize").DataTypes;
-var _Test = require("./test");
-var _RegisteredCompanies = require("./registered");
+var _RegisteredMembers = require("./registeredmember");
+var _CreditRequests = require("./creditrequests");
 
 function initModels(sequelize) {
-  var Test = _Test(sequelize, DataTypes);
-  var RegisteredCompanies = _RegisteredCompanies(sequelize, DataTypes);
+  var RegisteredMembers = _RegisteredMembers(sequelize, DataTypes);
+  var CreditRequests = _CreditRequests(sequelize, DataTypes);
+  RegisteredMembers.hasMany(CreditRequests);
+  CreditRequests.belongsTo(RegisteredMembers, {
+    foreignKey: "memberid",
+    targetKey: "pk",
+  });
 
   return {
-    Test,
-    RegisteredCompanies,
+    RegisteredMembers,
+    CreditRequests,
   };
 }
 module.exports = initModels;

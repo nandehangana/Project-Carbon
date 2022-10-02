@@ -79,6 +79,8 @@ truffle create contract YourContractName # scaffold a contract
 truffle create test YourTestName 
 
 truffle compile
+
+truffle migrate --reset
 ```
 
 

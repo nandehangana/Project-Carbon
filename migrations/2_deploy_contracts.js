@@ -1,5 +1,5 @@
 var CarbonCreditTokenArtifact = artifacts.require("CarbonCreditToken");
 
 module.exports = function (deployer) {
-  deployer.deploy(CarbonCreditTokenArtifact, 100000);
+  deployer.deploy(CarbonCreditTokenArtifact, BigInt(100*10**18));
 };
